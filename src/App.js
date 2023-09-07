@@ -1,3 +1,7 @@
+const author = 'Stephen King'
+const title = 'Holly Hardcover'
+const img = './images/book-1.jpg'
+
 function App() {
   return (
     <div className='App'>
@@ -9,23 +13,18 @@ function App() {
 const BookList = () => {
   return (
     <section className='booklist'>
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book author={author} title={title} img={img} />
+      <Book author={author} title={title} img={img} />
     </section>
   )
 }
 
-const Book = () => {
+const Book = ({ author, title, img }) => {
   return (
     <article className='book'>
-      <img
-        src='https://images-na.ssl-images-amazon.com/images/I/815oQ6G6HDL._AC_UL600_SR600,400_.jpg'
-        alt='Holly Hardcover '
-      />
-      <h2>Holly Hardcover </h2>
-      <h4> Stephen King</h4>
+      <img src={img} alt={author} />
+      <h2>{title} </h2>
+      <h4>{author}</h4>
     </article>
   )
 }
