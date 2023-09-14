@@ -37,6 +37,12 @@ body {
   background: #c35600;
   color: #fff;
 }
+h1 {
+  text-align: center;
+  margin-top: 4rem;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+}
 
 @media screen and (min-width: 768px) {
   .booklist {
