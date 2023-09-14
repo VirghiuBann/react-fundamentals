@@ -22,21 +22,33 @@ function App() {
 }
 
 const BookList = () => {
+  const getBook = (id) => {
+    const book = books.find((book) => book.id === id)
+    console.log(book)
+  }
+
   return (
     <section className='booklist'>
       <EventExamples />
       {books.map((book) => {
-        return <Book {...book} key={book.id} />
+        return <Book {...book} key={book.id} getBook={getBook} />
       })}
     </section>
   )
 }
 
-const Book = ({ author, title, img }) => {
+const Book = ({ id, author, title, img, getBook }) => {
   return (
     <article className='book'>
       <img src={img} alt={author} />
       <h2>{title} </h2>
+      <button
+        onClick={() => {
+          getBook(id)
+        }}
+      >
+        Display title
+      </button>
       <h4>{author}</h4>
     </article>
   )
