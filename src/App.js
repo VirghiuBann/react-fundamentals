@@ -12,7 +12,7 @@ function App() {
 const BookList = () => {
   return (
     <section className='booklist'>
-      <EventExamples />
+      {/* <EventExamples /> */}
       {books.map((book) => {
         return <Book {...book} key={book.id} />
       })}

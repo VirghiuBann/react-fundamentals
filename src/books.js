@@ -1,14 +1,24 @@
+import img1 from './images/book-1.jpg'
+import img2 from './images/book-2.jpg'
+import img3 from './images/book-3.jpg'
+
 export const books = [
   {
     id: 1,
     author: 'Stephen King',
     title: 'Holly Hardcover',
-    img: 'https://m.media-amazon.com/images/I/417kSOgt4aL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
+    img: img1,
   },
   {
     id: 2,
     author: 'Rebecca Yarros',
     title: 'Iron Flame',
-    img: 'https://m.media-amazon.com/images/I/51xSijRxXqL._SX307_BO1,204,203,200_.jpg',
+    img: img2,
+  },
+  {
+    id: 3,
+    author: 'Fairy Tale Hardcover',
+    title: 'Stephen King',
+    img: img3,
   },
 ]
